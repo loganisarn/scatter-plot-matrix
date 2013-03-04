@@ -40,3 +40,5 @@ Copyright © 2013 iWebMa Ltd.(Loganis)
 
 Distributed under the Eclipse Public License, the same as Clojure.
 See LICENSE file.
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/44dc0cf95ac50f6c644c52f46a21a7d6 "githalytics.com")](http://githalytics.com/loganisarn/scatter-plot-matrix)
