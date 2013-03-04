@@ -21,8 +21,8 @@ A Clojure/Incanter library designed to display a scatter plot matrix chart.
 
 ### Evaulate examples in Emacs (using Slime or nREPL)
 		emacs src/spm/core.clj
-		M-x clojure-jack-in
-		M-x nrepl-jack-in
+			M-x clojure-jack-in
+			M-x nrepl-jack-in
 		Compile core.clj buffer using C-c C-k, or
 			Slime: M-x slime-compile-and-load-file
 			nREPL: M-x nrepl-load-current-buffer
