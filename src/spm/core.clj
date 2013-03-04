@@ -229,9 +229,9 @@
    :data data (default $data) the data set for the plot.
    :title s (default \"Scatter Plot Matrix\").
    :bins n (default 10) number of bins (ie. bars) in histogram.
-   :group-by grp (default nil) name of column or columns for grouping data.
-   :only-first n (default 12) show only the first n most correlating columns of the data set.
-   :only-triangle b (default false) shows only the upper triangle of the plot matix.
+   :group-by grp (default nil) name of the column for grouping data.
+   :only-first n (default 6) show only the first n most correlating columns of the data set.
+   :only-triangle b (default false) shows only the upper triangle of the plot matrix.
 
    Examples:
 
@@ -267,7 +267,7 @@
 
   ;; Using more options
   (def iris-spm (scatter-plot-matrix iris
-                                     :title "Iris scatter plot matrix"
+                                     :title "Iris Scatter Plot Matrix"
                                      :bins 20 ; number of histogram bars
                                      :group-by :Species
                                      :only-first 4 ; most correlating columns
@@ -284,7 +284,9 @@
 
   ;;
   (def airline ($ [:year :passengers :month] (read-dataset "https://raw.github.com/liebke/incanter/master/data/airline_passengers.csv" :header true)))
-  (def airline-spm (scatter-plot-matrix airline  :group-by :month :bins 20 ))
+  (def airline-spm (scatter-plot-matrix airline  :group-by :month :bins 20 :title "Airline Scatter Plot Matrix"))
   (view airline-spm)
+  ;; Chick-weight
+  (view (scatter-plot-matrix (get-dataset :chick-weight) :group-by :Diet :bins 20 :title "Chick-weight Scatter Plot Matrix" ))
   ;;; End of Comment
   )
